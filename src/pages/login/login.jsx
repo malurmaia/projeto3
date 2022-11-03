@@ -1,19 +1,35 @@
+import '../../assets/css/auth.css';
 import background from "../../assets/images/gradient.jpg";
-import LoginIcon from '@mui/icons-material/Login';
+import LoginIcon from "@mui/icons-material/Login";
+import { Link } from "react-router-dom";
+
 import {
     Grid,
     Box,
     TextField,
     Button,
-    Stack
+    Stack,
+    InputAdornment,
+    OutlinedInput,
+    IconButton,
+    FormControl,
+    InputLabel
 } from "@mui/material"
-import { width } from "@mui/system";
+import { Visibility } from '@mui/icons-material';
+import { VisibilityOff } from '@mui/icons-material';
+import React, { useState } from 'react';
 
 const Login = () =>{
+    const [visibilidadeToggle, setVisibilidadeToggle] = useState(false);
+
+    const toggleVisibility = () => {
+        setVisibilidadeToggle(!visibilidadeToggle)
+    }
+
     return  <Grid container spacing={2} style={{
         height: '100vh'
     }}>
-                <Grid item sx={{
+                <Grid className='leftGrid' item sx={{
                     padding:'20',
                     boxSizing:'border-box'
                 }} xs={0} md={7} lg={8}>
@@ -27,7 +43,7 @@ const Login = () =>{
                     }}>
                     <img src={background} style={{
                         width:'100%',
-                    }} alt="image"/>
+                    }} alt="gradient"/>
                     </Stack>
                 </Grid>
                 <Grid item xs={12} md={5} lg={4}>
@@ -36,22 +52,55 @@ const Login = () =>{
                         paddingRight: 20,
                         height: '100%',
                         justifyContent:'center',
-                        alignItem:'center'
+                        alignItem:'center',
+                        
                     }}>
-                        <h1>Faça login</h1>
+                        <h1 style={{
+                                textAlign:'center',
+                                display:'block',
+                                width:'100%',
+                                color: '#fcbcd0'
+                            }}>Faça login</h1>
                         <Grid container spacing={2}>
                             <Grid item xs={12}>
-                                <TextField id="standard-basic" label="Username" 
-                                type="username" variant="standard" />
+                            <TextField fullWidth id="outlined-basic" label="Usuário" 
+                                type="username" variant="outlined" />
+                            </Grid>
+                            <Grid item xs={12} sx={{
+                                marginBottom:'25px'
+                            }}>
+                                <FormControl sx={{
+                                    width:'100%'
+                                }}>
+                                    <InputLabel>Senha</InputLabel>
+                                         <OutlinedInput fullWidth id="standard-adornment-password" 
+                                label="senha"
+                                type={visibilidadeToggle ? 'text' : 'password'}
+                                endAdornment={<InputAdornment position="end">
+                                             <IconButton
+                                         aria-label="toggle password visibility"
+                                         onClick={toggleVisibility}
+                                        >{
+                                            toggleVisibility ? <Visibility/> : <VisibilityOff/>
+                                         }
+                                             </IconButton>
+                                </InputAdornment>}
+                                 variant="standard" />
+                                </FormControl>
                             </Grid>
                             <Grid item xs={12}>
-                                <TextField id="standard-basic" label="Password" variant="standard" />
-                            </Grid>
-                            <Grid item xs={12}>
-                            <Button variant="contained" endIcon={<LoginIcon />}>
+                            <Button fullWidth variant="contained" endIcon={<LoginIcon />} style={{
+                                background:'#ffc9e1',
+                            }}>
   Login
                             </Button>
                             </Grid>
+                            <Link style={{
+                                textAlign:'center',
+                                display:'block',
+                                width:'100%',
+                                paddingTop:'10px'
+                            }} to="/register">Criar conta</Link>
                         </Grid>
                     </Stack>
                 </Grid>
