@@ -99,18 +99,20 @@ const Register = () =>{
                             </Grid>
                             
                             <Grid item xs={12}>
-                            <Button fullWidth variant="contained" endIcon={<LoginIcon />} style={{
-                                background:'#ffc9e1',
-                            }}>
-  Registrar
-                            </Button>
-                            </Grid>
                             <Link style={{
                                 textAlign:'center',
                                 display:'block',
                                 width:'100%',
                                 paddingTop:'10px'
-                            }} to="/login">Entrar</Link>
+                            }} to="/login">
+                                <Button fullWidth variant="contained" endIcon={<LoginIcon />} style={{
+                                background:'#ffc9e1',
+                            }}>
+  Registrar
+                            </Button>
+                            </Link>
+                            </Grid>
+                           
                         </Grid>
                     </Stack>
                 </Grid>

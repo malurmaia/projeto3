@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
+import { products } from "../catalog/products";
 
 const Product = () =>{
     const params = useParams();
 
-    return  <h1>Product {params.id}</h1>
+    return  <h1>Product {products[params.id].name}</h1>
 }
 export default Product;
