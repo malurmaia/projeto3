@@ -15,9 +15,7 @@ a{
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,7 +24,9 @@ a{
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+header{
+  background-color: #c2e0fc !important;
+}
 .App-link {
   color: #61dafb;
 }

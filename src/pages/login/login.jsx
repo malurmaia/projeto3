@@ -2,6 +2,7 @@ import '../../assets/css/auth.css';
 import background from "../../assets/images/gradient.jpg";
 import LoginIcon from "@mui/icons-material/Login";
 import { Link } from "react-router-dom";
+import './login.css'
 
 import {
     Grid,
@@ -89,9 +90,7 @@ const Login = () =>{
                                 </FormControl>
                             </Grid>
                             <Grid item xs={12}>
-                            <Button fullWidth variant="contained" endIcon={<LoginIcon />} style={{
-                                background:'#ffc9e1',
-                            }}>
+                            <Button fullWidth variant="contained" endIcon={<LoginIcon />}className="btnLogin">
   Login
                             </Button>
                             </Grid>

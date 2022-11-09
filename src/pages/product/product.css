@@ -3,9 +3,7 @@
     box-sizing: border-box;
     padding: 0;
 }
-.imageSide{
 
-}
 .imageSide > .imageSide_image .imageSide_image-item{
     width: 100%;
     height: 600px;
@@ -24,9 +22,7 @@
     box-sizing: border-box;
     cursor: pointer;
 }
-.productItem{
 
-}
 .productItem_title{
     color:#333;
     font-weight: 600;
@@ -47,6 +43,9 @@
 }
 .productItem_categories-label{
     margin-right: 5px;
+        background-color: #fcc4d3 !important;
+        color:#fff;
+    
 
 }
 .productItem_description{
@@ -83,7 +82,13 @@
 }
 
 
-.productItem .productItem__buy{
+.productItem button{
+    background-color: #fcc4d3 !important;
+    color:#fff;
+}
+.productItem svg{
+    background-color: #fcc4d3 !important;
+    color:#fff;
 }
 
 @media screen and (min-width: 1297px){

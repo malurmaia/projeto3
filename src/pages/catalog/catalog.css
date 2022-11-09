@@ -1,3 +1,4 @@
+
 .catalog-item{
     position: relative;
     padding-top: 0 !important;
@@ -22,13 +23,13 @@
     top: 0;
     color: #fff;
     font-weight: bold;
-    background-color: #1976d2;
+    background-color: #fcc4d3;
     box-sizing: border-box;
     padding: 10px;
     border-radius: 0 0 0 16px;
 }
 .category-label{
-    background-color: #1976d2;
+    background-color: #fcc4d3;
     box-sizing: border-box;
     padding: 2px 5px;
     border-radius: 5px;
